@@ -1,0 +1,40 @@
+
+Gurobi 12.0.2 (mac64[arm]) logging started Mon Jun 16 00:34:50 2025
+
+Set parameter LogFile to value "/Users/yurunfeng/Documents/GitHub/LRGTS-store-location/result/gurobi/snyder/15nodes/15-0.8-3.log"
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (mac64[arm] - Darwin 24.5.0 24F74)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  1200
+
+Optimize a model with 510 rows, 735 columns and 3510 nonzeros
+Model fingerprint: 0xa05842ff
+Variable types: 0 continuous, 735 integer (735 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [3e+02, 3e+06]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 1.648316e+07
+Presolve removed 45 rows and 240 columns
+Presolve time: 0.01s
+Presolved: 465 rows, 495 columns, 2955 nonzeros
+Variable types: 0 continuous, 495 integer (495 binary)
+
+Root relaxation: objective 1.436390e+06, 155 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1436390.1817 1436390.18  0.00%     -    0s
+
+Explored 1 nodes (155 simplex iterations) in 0.02 seconds (0.02 work units)
+Thread count was 10 (of 10 available processors)
+
+Solution count 2: 1.43639e+06 1.64832e+07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.436390181653e+06, best bound 1.436390181653e+06, gap 0.0000%

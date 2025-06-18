@@ -1,0 +1,45 @@
+
+Gurobi 12.0.2 (mac64[arm]) logging started Sat Jun 14 00:43:30 2025
+
+Set parameter LogFile to value "/Users/yurunfeng/Documents/GitHub/LRGTS-store-location/result/gurobi/snyder/15nodes/15-0.95-4.log"
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (mac64[arm] - Darwin 24.5.0 24F74)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  1200
+
+Optimize a model with 4785 rows, 7245 columns and 33600 nonzeros
+Model fingerprint: 0xe24d1118
+Variable types: 3615 continuous, 3630 integer (3630 binary)
+Coefficient statistics:
+  Matrix range     [5e-02, 1e+00]
+  Objective range  [7e+03, 3e+06]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+Found heuristic solution: objective 1.648316e+07
+Presolve removed 481 rows and 241 columns
+Presolve time: 0.73s
+Presolved: 4304 rows, 7004 columns, 29488 nonzeros
+Variable types: 3374 continuous, 3630 integer (3630 binary)
+
+Root relaxation: objective 6.653677e+05, 1110 iterations, 0.02 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 665367.686    0  189 1.6483e+07 665367.686  96.0%     -    0s
+H    0     0                    722147.12643 665367.686  7.86%     -    0s
+H    0     0                    667672.01158 665367.686  0.35%     -    0s
+H    0     0                    667671.99515 665769.591  0.28%     -    0s
+     0     0 665959.764    0  209 667671.995 665959.764  0.26%     -    0s
+H    0     0                    667498.60260 665959.764  0.23%     -    0s
+
+Explored 1 nodes (1480 simplex iterations) in 0.99 seconds (1.73 work units)
+Thread count was 10 (of 10 available processors)
+
+Solution count 5: 667499 667672 667692 ... 1.64832e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.674986025964e+05, best bound 6.674986025964e+05, gap 0.0000%

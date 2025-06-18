@@ -1,0 +1,179 @@
+
+Gurobi 12.0.2 (mac64[arm]) logging started Thu May 29 02:42:33 2025
+
+Set parameter LogFile to value "../../result/data/prodhon/coord200-10-2-2e.log"
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (mac64[arm] - Darwin 24.4.0 24E263)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  7200
+
+Optimize a model with 2861014 rows, 3003220 columns and 74681962 nonzeros
+Model fingerprint: 0xf8ec146c
+Variable types: 35610 continuous, 2967610 integer (2967610 binary)
+Coefficient statistics:
+  Matrix range     [5e-02, 1e+04]
+  Objective range  [3e-02, 1e+06]
+  Bounds range     [1e+00, 7e+01]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 8614 rows and 2210 columns (presolve time = 5s)...
+Presolve removed 8614 rows and 2210 columns (presolve time = 11s)...
+Presolve removed 8614 rows and 2210 columns (presolve time = 16s)...
+Presolve removed 8614 rows and 2210 columns (presolve time = 20s)...
+Presolve removed 8814 rows and 4210 columns (presolve time = 26s)...
+Presolve removed 10814 rows and 4210 columns (presolve time = 30s)...
+Presolve removed 10814 rows and 4210 columns (presolve time = 35s)...
+Presolve removed 10814 rows and 4210 columns (presolve time = 40s)...
+Presolve removed 10814 rows and 4210 columns (presolve time = 45s)...
+Presolve removed 10814 rows and 4210 columns (presolve time = 50s)...
+Presolve removed 10814 rows and 4410 columns (presolve time = 57s)...
+Presolve removed 10814 rows and 4410 columns (presolve time = 61s)...
+Presolve removed 11014 rows and 4410 columns (presolve time = 65s)...
+Presolve removed 11014 rows and 4410 columns (presolve time = 70s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 75s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 80s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 85s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 90s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 95s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 100s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 105s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 129s)...
+Presolve removed 11014 rows and 4608 columns (presolve time = 132s)...
+Presolve removed 11212 rows and 4806 columns (presolve time = 137s)...
+Presolve removed 11212 rows and 4806 columns (presolve time = 142s)...
+Presolve removed 11212 rows and 4806 columns (presolve time = 146s)...
+Presolve removed 11212 rows and 4806 columns
+Presolve time: 148.84s
+Presolved: 2849802 rows, 2998414 columns, 74635566 nonzeros
+Variable types: 33202 continuous, 2965212 integer (2965212 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 1.61s
+
+Barrier performed 0 iterations in 182.31 seconds (670.71 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 1.35s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   15270    5.6695963e+06   0.000000e+00   0.000000e+00    182s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+   17790 DPushes remaining with DInf 0.0000000e+00               184s
+       0 DPushes remaining with DInf 0.0000000e+00               184s
+
+   12866 PPushes remaining with PInf 0.0000000e+00               185s
+       0 PPushes remaining with PInf 0.0000000e+00               185s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.2442427e+04    185s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   37633    5.6695963e+06   0.000000e+00   1.244243e+04    186s
+   38217    5.6695963e+06   0.000000e+00   0.000000e+00    186s
+
+Root relaxation: objective 5.669596e+06, 38217 iterations, 21.18 seconds (39.82 work units)
+Total elapsed time = 190.58s (DegenMoves)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5669596.27    0 2830          - 5669596.27      -     -  292s
+     0     0 5678937.91    0  440          - 5678937.91      -     -  406s
+     0     0 5678937.91    0  430          - 5678937.91      -     -  449s
+     0     0 5678937.91    0  447          - 5678937.91      -     -  497s
+     0     0 5678937.91    0  418          - 5678937.91      -     -  529s
+     0     0 5678937.91    0  429          - 5678937.91      -     -  588s
+     0     0 5678937.91    0  421          - 5678937.91      -     -  635s
+     0     0 5678937.91    0  421          - 5678937.91      -     -  700s
+     0     0 5678937.91    0  426          - 5678937.91      -     -  730s
+     0     0 5678937.91    0  427          - 5678937.91      -     -  817s
+     0     0 5678937.91    0  427          - 5678937.91      -     -  851s
+     0     0 5678937.91    0  418          - 5678937.91      -     -  909s
+     0     0 5678937.91    0  418          - 5678937.91      -     -  962s
+     0     2 5678937.91    0  418          - 5678937.91      -     - 1565s
+     1     3 5679062.91    1  414          - 5678937.91      -  9200 1575s
+     3     5 5679250.91    2  414          - 5679125.91      -  3138 1585s
+     6     9 5679432.91    3  411          - 5679250.91      -  1657 1603s
+    11    16 5679498.91    4  409          - 5679289.90      -   948 1701s
+    20    24 5679501.91    5  412          - 5679321.55      -   590 2048s
+    30    50 5679501.91    6  412          - 5679337.66      -   447 3027s
+    58    67 5679585.79    8  418          - 5679337.66      -   341 3680s
+    75   108 5679676.96    9  413          - 5679337.66      -   311 5398s
+   119   145 5679994.78   12  412          - 5679337.66      -   265 7451s
+
+Cutting planes:
+  Gomory: 24
+  Lift-and-project: 2
+  Implied bound: 605
+  MIR: 1415
+  Flow cover: 175
+  Zero half: 254
+  RLT: 1451
+  Relax-and-lift: 235
+  BQP: 4
+
+Explored 156 nodes (159458 simplex iterations) in 7454.20 seconds (3620.07 work units)
+Thread count was 10 (of 10 available processors)
+
+Solution count 0
+
+Time limit reached
+Best objective -, best bound 5.679337662619e+06, gap -
+--------------------------------
+../../result/data/prodhon/coord200-10-2-2e.log
+--------------------------------
+All costs: 
+gurobi fail
+9
+-----------------------------
+data.num_cus = 200
+data.num_store = 10
+data.coord_rw = [[0, 0]]
+data.coord_store = [[9, 18], [7, 39], [22, 18], [30, 22], [43, 28], [46, 6], [3, 39], [46, 36], [38, 26], [34, 33]]
+data.coord_cus = [[4, 24], [17, 17], [22, 22], [19, 10], [17, 28], [24, 20], [11, 15], [7, 19], [9, 19], [24, 6], [1, 17], [20, 8], [7, 10], [15, 8], [7, 19], [9, 9], [12, 24], [8, 24], [22, 13], [7, 8], [19, 15], [22, 4], [15, 28], [18, 13], [19, 21], [2, 15], [23, 8], [8, 9], [23, 11], [11, 16], [24, 20], [10, 27], [16, 16], [20, 28], [5, 27], [18, 22], [17, 11], [1, 1], [4, 23], [23, 7], [16, 27], [13, 18], [2, 3], [10, 25], [6, 9], [11, 26], [19, 24], [8, 2], [13, 21], [22, 25], [14, 15], [13, 12], [2, 27], [12, 28], [18, 11], [14, 27], [15, 16], [9, 1], [8, 28], [9, 12], [6, 18], [10, 3], [22, 23], [5, 26], [15, 9], [6, 19], [21, 25], [18, 16], [7, 22], [23, 23], [25, 22], [24, 5], [24, 28], [22, 14], [13, 16], [21, 4], [12, 22], [3, 1], [17, 26], [11, 16], [24, 4], [14, 22], [23, 9], [16, 9], [1, 10], [26, 18], [21, 14], [16, 10], [17, 17], [1, 2], [18, 23], [22, 2], [4, 10], [6, 28], [15, 28], [21, 22], [8, 3], [8, 24], [25, 20], [2, 16], [26, 29], [36, 45], [34, 41], [41, 43], [32, 46], [47, 27], [29, 33], [49, 49], [30, 46], [33, 38], [31, 32], [38, 29], [30, 27], [47, 49], [33, 33], [31, 49], [38, 49], [44, 26], [46, 46], [35, 30], [29, 27], [30, 31], [31, 31], [26, 34], [30, 47], [48, 36], [37, 46], [30, 30], [44, 31], [42, 32], [37, 28], [45, 50], [32, 27], [34, 34], [38, 29], [44, 44], [30, 24], [48, 35], [37, 30], [36, 44], [33, 26], [32, 47], [31, 48], [49, 25], [41, 36], [47, 37], [49, 38], [41, 47], [48, 36], [39, 49], [25, 36], [48, 44], [50, 50], [41, 44], [40, 36], [45, 27], [36, 26], [46, 28], [40, 38], [27, 38], [31, 44], [41, 31], [39, 36], [30, 40], [40, 38], [42, 32], [50, 43], [37, 40], [42, 39], [48, 43], [35, 40], [31, 35], [27, 40], [43, 50], [46, 27], [39, 37], [43, 30], [25, 46], [30, 33], [34, 25], [29, 27], [44, 31], [32, 45], [39, 36], [30, 34], [32, 27], [47, 49], [33, 33], [36, 33], [50, 31], [33, 42], [39, 34], [42, 24], [50, 38], [25, 30], [33, 45], [29, 48], [49, 48], [47, 49], [39, 28]]
+data.cap_veh_fir = 0
+data.cap_veh_sec = 70
+data.cap_store = [910, 910, 980, 1260, 980, 980, 1260, 980, 980, 910]
+data.dmd_cus = [18, 13, 17, 18, 18, 15, 16, 12, 14, 11, 12, 17, 17, 12, 18, 17, 12, 16, 19, 20, 14, 15, 17, 13, 20, 16, 18, 19, 15, 18, 12, 16, 18, 16, 17, 15, 12, 20, 14, 20, 19, 13, 12, 18, 15, 13, 17, 12, 13, 20, 17, 12, 12, 17, 17, 16, 17, 15, 20, 15, 16, 15, 13, 16, 11, 18, 11, 14, 13, 16, 18, 15, 14, 15, 14, 11, 12, 11, 15, 14, 20, 20, 17, 14, 18, 13, 16, 18, 16, 16, 14, 17, 15, 15, 13, 20, 12, 11, 11, 15, 20, 20, 12, 19, 12, 13, 16, 17, 16, 12, 13, 19, 11, 19, 16, 11, 11, 11, 17, 15, 17, 11, 19, 12, 17, 12, 18, 16, 19, 18, 17, 16, 15, 17, 16, 17, 20, 13, 18, 14, 20, 13, 19, 19, 12, 20, 20, 11, 17, 11, 17, 17, 20, 14, 13, 15, 12, 11, 18, 15, 16, 15, 14, 19, 16, 17, 15, 19, 11, 18, 18, 13, 20, 15, 17, 20, 17, 13, 20, 20, 15, 17, 11, 11, 12, 13, 19, 15, 13, 14, 11, 14, 19, 12, 17, 20, 13, 12, 14, 20]
+data.fixed_cost_store = [1136430, 1226060, 1194720, 740990, 1150710, 1260290, 1161920, 926280, 1244630, 1097650]
+data.fixed_veh_fir = 0
+data.fixed_veh_sec = 1000
+data.dist_matrix = [[    0.  2013.  3963. ...  6860.  6790.  4802.]
+ [ 2013.     0.  4220. ... 10000.  9809.  6325.]
+ [ 3963.  4220.     0. ...  8591.  8247.  6768.]
+ ...
+ [ 6860. 10000.  8591. ...     0.   448.  4473.]
+ [ 6790.  9809.  8247. ...   448.     0.  4495.]
+ [ 4802.  6325.  6768. ...  4473.  4495.     0.]]
+data.accept_rate = 3
+data.fixed_cost_rate = 10
+data.i_0 = -1
+data.H = range(0, 1)
+data.I = range(1, 11)
+data.I_bar = [-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+data.M = range(11, 211)
+data.N = range(11, 211)
+data.S = 14114.0
+data.R = range(1, 5)
+data.pi = 1386.0
+data.rho_s = 0.1
+data.rho_L = 1
+data.rho_M = 0.1
+data.rho_N = 0.1
+data.q = 0.95
+-----------------------------

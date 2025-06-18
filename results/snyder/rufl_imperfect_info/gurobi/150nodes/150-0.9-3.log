@@ -1,0 +1,106 @@
+
+Gurobi 12.0.2 (mac64[arm]) logging started Fri Jun 13 21:34:26 2025
+
+Set parameter LogFile to value "/Users/yurunfeng/Documents/GitHub/LRGTS-store-location/result/gurobi/snyder/150nodes/150-0.9-3.log"
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (mac64[arm] - Darwin 24.5.0 24F74)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  1200
+
+Optimize a model with 3510600 rows, 6795450 columns and 32209486 nonzeros
+Model fingerprint: 0xd7a4a200
+Variable types: 3397650 continuous, 3397800 integer (3397800 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+00]
+  Objective range  [9e+01, 8e+06]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+00]
+Found heuristic solution: objective 6.624322e+07
+Presolve removed 22800 rows and 22650 columns (presolve time = 5s)...
+Presolve removed 22800 rows and 22650 columns (presolve time = 10s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 15s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 21s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 25s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 30s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 40s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 45s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 50s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 80s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 80s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 87s)...
+Presolve removed 45300 rows and 22650 columns (presolve time = 90s)...
+Presolve removed 45300 rows and 22650 columns
+Presolve time: 90.51s
+Presolved: 3465300 rows, 6772800 columns, 29013729 nonzeros
+Variable types: 3375000 continuous, 3397800 integer (3397800 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 14s
+Elapsed ordering time = 15s
+Ordering time: 19.56s
+
+Barrier performed 0 iterations in 123.59 seconds (261.46 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 8.10s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   25600    2.3186993e+06   0.000000e+00   0.000000e+00    124s
+
+Root relaxation: objective 2.318699e+06, 25600 iterations, 30.71 seconds (47.54 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2318699.28    0 3098 6.6243e+07 2318699.28  96.5%     -  136s
+H    0     0                    3334974.5780 2318699.28  30.5%     -  174s
+H    0     0                    3267199.3406 2318699.28  29.0%     -  216s
+H    0     0                    3201021.0295 2318699.28  27.6%     -  286s
+     0     0 2343182.61    0 7057 3201021.03 2343182.61  26.8%     -  579s
+     0     0 2346735.60    0 6146 3201021.03 2346735.60  26.7%     -  647s
+     0     0 2347212.93    0 6417 3201021.03 2347212.93  26.7%     -  710s
+     0     0 2347281.24    0 6728 3201021.03 2347281.24  26.7%     -  754s
+     0     0 2347307.65    0 6635 3201021.03 2347307.65  26.7%     -  792s
+     0     0 2347321.21    0 6638 3201021.03 2347321.21  26.7%     -  823s
+     0     0 2347333.21    0 6683 3201021.03 2347333.21  26.7%     -  857s
+     0     0 2347335.64    0 6692 3201021.03 2347335.64  26.7%     -  879s
+     0     0 2347335.64    0 6693 3201021.03 2347335.64  26.7%     -  882s
+     0     0 2347335.64    0 6693 3201021.03 2347335.64  26.7%     -  885s
+     0     0 2347335.64    0 6693 3201021.03 2347335.64  26.7%     -  886s
+     0     0 2348552.13    0 6758 3201021.03 2348552.13  26.6%     - 1099s
+     0     0 2348562.10    0 6811 3201021.03 2348562.10  26.6%     - 1118s
+     0     0 2348563.08    0 6714 3201021.03 2348563.08  26.6%     - 1122s
+     0     0 2348564.22    0 6804 3201021.03 2348564.22  26.6%     - 1130s
+     0     0 2348564.41    0 6726 3201021.03 2348564.41  26.6%     - 1132s
+     0     0 2348564.41    0 6727 3201021.03 2348564.41  26.6%     - 1133s
+     0     0 2348564.41    0 6727 3201021.03 2348564.41  26.6%     - 1135s
+     0     0 2348564.41    0 6727 3201021.03 2348564.41  26.6%     - 1136s
+     0     0 2348564.41    0 6727 3201021.03 2348564.41  26.6%     - 1138s
+     0     0 2348564.41    0 6727 3201021.03 2348564.41  26.6%     - 1139s
+     0     0 2348564.41    0 6726 3201021.03 2348564.41  26.6%     - 1140s
+     0     0 2349676.16    0 6775 3201021.03 2349676.16  26.6%     - 1200s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 12
+  MIR: 99
+  Flow cover: 445
+  RLT: 26
+
+Explored 1 nodes (111266 simplex iterations) in 1200.46 seconds (2031.25 work units)
+Thread count was 10 (of 10 available processors)
+
+Solution count 4: 3.20102e+06 3.2672e+06 3.33497e+06 6.62432e+07 
+
+Time limit reached
+Best objective 3.201021029530e+06, best bound 2.349676160810e+06, gap 26.5960%

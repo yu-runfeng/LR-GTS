@@ -1,0 +1,53 @@
+
+Gurobi 12.0.2 (mac64[arm]) logging started Fri Jun 13 20:54:23 2025
+
+Set parameter LogFile to value "/Users/yurunfeng/Documents/GitHub/LRGTS-store-location/result/gurobi/snyder/15nodes/15-0.9-3.log"
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (mac64[arm] - Darwin 24.5.0 24F74)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  1200
+
+Optimize a model with 4785 rows, 7245 columns and 33600 nonzeros
+Model fingerprint: 0x3c58d94a
+Variable types: 3615 continuous, 3630 integer (3630 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+00]
+  Objective range  [7e+03, 3e+06]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+00]
+Found heuristic solution: objective 1.648316e+07
+Presolve removed 488 rows and 240 columns
+Presolve time: 0.06s
+Presolved: 4297 rows, 7005 columns, 30130 nonzeros
+Variable types: 3375 continuous, 3630 integer (3630 binary)
+
+Root relaxation: objective 7.100279e+05, 488 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 710027.911    0  205 1.6483e+07 710027.911  95.7%     -    0s
+H    0     0                    925372.44937 710027.911  23.3%     -    0s
+H    0     0                    925372.44834 710027.911  23.3%     -    0s
+     0     0 749624.980    0  328 925372.448 749624.980  19.0%     -    0s
+     0     0 749649.306    0  334 925372.448 749649.306  19.0%     -    0s
+H    0     0                    925372.43904 749649.306  19.0%     -    0s
+H    0     0                    915740.84196 749649.306  18.1%     -    0s
+H    0     0                    914508.67535 749649.306  18.0%     -    0s
+     0     0 750174.708    0  347 914508.675 750174.708  18.0%     -    0s
+     0     0 893133.148    0  137 914508.673 893133.148  2.34%     -    1s
+     0     0 893460.249    0   98 914508.673 893460.249  2.30%     -    1s
+     0     0 893474.558    0   95 914508.673 893474.558  2.30%     -    1s
+H    0     0                    893486.13189 893474.558  0.00%     -    1s
+     0     0 893474.558    0   95 893486.132 893474.558  0.00%     -    1s
+
+Explored 1 nodes (3144 simplex iterations) in 1.19 seconds (1.97 work units)
+Thread count was 10 (of 10 available processors)
+
+Solution count 5: 893486 914509 915741 ... 1.64832e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.934861318836e+05, best bound 8.934861318836e+05, gap 0.0000%

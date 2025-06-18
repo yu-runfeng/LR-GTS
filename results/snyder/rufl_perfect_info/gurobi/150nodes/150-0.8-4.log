@@ -1,0 +1,52 @@
+
+Gurobi 12.0.2 (mac64[arm]) logging started Mon Jun 16 00:34:57 2025
+
+Set parameter LogFile to value "/Users/yurunfeng/Documents/GitHub/LRGTS-store-location/result/gurobi/snyder/150nodes/150-0.8-4.log"
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (mac64[arm] - Darwin 24.5.0 24F74)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  1200
+
+Optimize a model with 45750 rows, 90750 columns and 1903336 nonzeros
+Model fingerprint: 0xde350700
+Variable types: 0 continuous, 90750 integer (90750 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [7e-01, 8e+06]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 6.624322e+07
+Presolve removed 450 rows and 22650 columns
+Presolve time: 1.39s
+Presolved: 45300 rows, 68100 columns, 1856986 nonzeros
+Variable types: 0 continuous, 68100 integer (68100 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 1.76 seconds (6.53 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.139339e+06, 12633 iterations, 0.28 seconds (0.86 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    3139338.8388 3139338.84  0.00%     -    1s
+
+Explored 1 nodes (12633 simplex iterations) in 1.78 seconds (6.54 work units)
+Thread count was 10 (of 10 available processors)
+
+Solution count 2: 3.13934e+06 6.62432e+07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.139338838757e+06, best bound 3.139338838757e+06, gap 0.0000%
