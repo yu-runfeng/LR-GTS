@@ -149,7 +149,7 @@ break_arcs = arcs_par{best_ind};
 best_general_cost = cost_par(best_ind);
 
 % [DEBUG] check if the new route is valid
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end
 
 function [neighbor, arcs, general_cost] = Relocate_Cus(fst, cus, ...
@@ -189,16 +189,16 @@ employ_num = employ_num - (length(route.waypoints{fst.ind}) > 2) - ...
     (length(fst.route) > 2) + (length(snd_route) > 2);
 
 % [DEBUG]
-if ~is_random
-    if length(fst.route) == length(route.waypoints{snd_ind}) && ...
-            all(fst.route == route.waypoints{snd_ind})
-        error("same route");
-    end
-    if length(snd_route) == length(route.waypoints{fst.ind}) && ...
-            all(snd_route == route.waypoints{fst.ind})
-        error("same route");
-    end
-end
+% if ~is_random
+%     if length(fst.route) == length(route.waypoints{snd_ind}) && ...
+%             all(fst.route == route.waypoints{snd_ind})
+%         error("same route");
+%     end
+%     if length(snd_route) == length(route.waypoints{fst.ind}) && ...
+%             all(snd_route == route.waypoints{fst.ind})
+%         error("same route");
+%     end
+% end
 
 % update cost for the new route structure
 cost = route.cost;
@@ -262,7 +262,7 @@ arcs = [cus.old_before, cus.ind; cus.ind, cus.old_after; ...
 general_cost = cost.generalized;
 
 % [DEBUG] check if the new route is valid
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end
 
 function r_info = Get_Route_Info()

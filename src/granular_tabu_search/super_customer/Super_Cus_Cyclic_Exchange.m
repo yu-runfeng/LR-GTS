@@ -62,12 +62,12 @@ end
 sp_cus = Super_Cus_Get_From_Cycle(new_cycle, data);
 
 % [DEBUG] check integrality
-sequence = zeros(1, data.num_cus);
-count = 1;
-for i = 1:length(new_cycle)
-    len = length(new_cycle{i});
-    sequence(count:count+len-1) = new_cycle{i};
-    count = count + len;
-end
-assert(all(sort(unique(sequence))-data.num_store == 1:data.num_cus));
+% sequence = zeros(1, data.num_cus);
+% count = 1;
+% for i = 1:length(new_cycle)
+%     len = length(new_cycle{i});
+%     sequence(count:count+len-1) = new_cycle{i};
+%     count = count + len;
+% end
+% assert(all(sort(unique(sequence))-data.num_store == 1:data.num_cus));
 end

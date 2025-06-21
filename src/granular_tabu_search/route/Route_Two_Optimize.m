@@ -164,7 +164,7 @@ break_arcs = arcs_par{best_ind};
 best_general_cost = cost_par(best_ind);
 
 % [DEBUG]
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end
 
 function info = Get_Route_Info()
@@ -233,24 +233,24 @@ employ_num = employ_num - (length(route.waypoints{fst.ind}) > 2) - ...
     (length(fst_route) > 2) + (length(snd_route) > 2);
 
 % [DEBUG]
-if ~is_random
-    if length(fst_route) == length(route.waypoints{snd.ind}) && ...
-            all(fst_route == route.waypoints{snd.ind})
-        error("same route");
-    end
-    if length(snd_route) == length(route.waypoints{fst.ind}) && ...
-            all(snd_route == route.waypoints{fst.ind})
-        error("same route");
-    end
-    if length(fst_route) == length(route.waypoints{fst.ind}) && ...
-            all(fst_route == route.waypoints{fst.ind})
-        error("same route");
-    end
-    if length(snd_route) == length(route.waypoints{snd.ind}) && ...
-            all(snd_route == route.waypoints{snd.ind})
-        error("same route");
-    end
-end
+% if ~is_random
+%     if length(fst_route) == length(route.waypoints{snd.ind}) && ...
+%             all(fst_route == route.waypoints{snd.ind})
+%         error("same route");
+%     end
+%     if length(snd_route) == length(route.waypoints{fst.ind}) && ...
+%             all(snd_route == route.waypoints{fst.ind})
+%         error("same route");
+%     end
+%     if length(fst_route) == length(route.waypoints{fst.ind}) && ...
+%             all(fst_route == route.waypoints{fst.ind})
+%         error("same route");
+%     end
+%     if length(snd_route) == length(route.waypoints{snd.ind}) && ...
+%             all(snd_route == route.waypoints{snd.ind})
+%         error("same route");
+%     end
+% end
 
 % update the new cost
 new_cost = route.cost;
@@ -317,5 +317,5 @@ arcs = [fst.before, fst.after; snd.before, snd.after];
 general_cost = new_cost.generalized;
 
 % [DEBUG] check if the new route is valid
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end

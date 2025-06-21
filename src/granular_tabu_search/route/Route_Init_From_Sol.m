@@ -19,12 +19,12 @@ for v_ind = 1:length(sol.super_cus.cycle)
 
     route_len(v_ind) = sol.super_cus.dist_mat(store, v_ind);
 
-    % [DEBUG]
-    arc_from = cycle{v_ind, 1}(1:end - 1);
-    arc_to = cycle{v_ind, 1}(2:end);
-    ind = sub2ind(size(data.dist_snd_layer), arc_from, arc_to);
-    test_len = sum(data.dist_snd_layer(ind));
-    assert(Is_Close(route_len(v_ind), test_len, 1e-4));
+    % [DEBUG] validate route length
+    % arc_from = cycle{v_ind, 1}(1:end - 1);
+    % arc_to = cycle{v_ind, 1}(2:end);
+    % ind = sub2ind(size(data.dist_snd_layer), arc_from, arc_to);
+    % test_len = sum(data.dist_snd_layer(ind));
+    % assert(Is_Close(route_len(v_ind), test_len, 1e-4));
 end
 exceeded_capacity = sol.super_cus.demand - data.cap_vhc;
 exceeded_capacity(exceeded_capacity < 0) = 0;

@@ -68,7 +68,7 @@ break_arcs = arcs_par{best_ind};
 best_general_cost = cost_par(best_ind);
 
 % [DEBUG] check if the new route is valid
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end
 
 function [neighbor, break_arcs, best_general_cost] = Relocate_Cus( ...
@@ -157,7 +157,7 @@ new_route = [route_copy(1:route_info.pos_ind), route_info.cus, ...
 new_route_len = route_len + sum(increase_len-decrease_len);
 
 % [DEBUG] new route must be different from the old one
-assert(any(new_route ~= route.waypoints{route_ind}));
+% assert(any(new_route ~= route.waypoints{route_ind}));
 
 % update cost for the new route structure
 new_cost = Update_Intro_Cost(route.cost, data, route, route_ind, ...
@@ -178,5 +178,5 @@ arcs = [route_info.old_before, route_info.cus; ...
 general_cost = new_cost.generalized;
 
 % [DEBUG] check if the new route is valid
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end

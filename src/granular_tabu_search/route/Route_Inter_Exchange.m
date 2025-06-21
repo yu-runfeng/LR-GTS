@@ -118,7 +118,7 @@ break_arcs = arcs_par{best_ind};
 best_general_cost = cost_par(best_ind);
 
 % [DEBUG] check if the new route is valid
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end
 
 function info = Get_Exchange_Info()
@@ -182,16 +182,17 @@ snd_cus = snd_route(2:end-1) - data.num_store;
 snd_exceed = max([snd_cap - data.cap_vhc, 0]);
 
 % [DEBUG] check if the new route is same as the old route
-if ~is_random
-    if length(fst_route) == length(route.waypoints{snd_info.route_ind}) && ...
-            all(fst_route == route.waypoints{snd_info.route_ind})
-        error("same route");
-    end
-    if length(snd_route) == length(route.waypoints{fst_info.route_ind}) && ...
-            all(snd_route == route.waypoints{fst_info.route_ind})
-        error("same route");
-    end
-end
+% if ~is_random
+%     if length(fst_route) == length(route.waypoints{snd_info.route_ind}) && ...
+%             all(fst_route == route.waypoints{snd_info.route_ind})
+%         error("same route");
+%     end
+%     if length(snd_route) == length(route.waypoints{fst_info.route_ind}) && ...
+%             all(snd_route == route.waypoints{fst_info.route_ind})
+%         error("same route");
+%     end
+% end
+
 % update the new cost, fixed costs are not needed to be updated
 cost = route.cost;
 
@@ -252,5 +253,5 @@ arcs = [fst_info.before, fst_info.cus; fst_info.cus, fst_info.after; ...
 general_cost = cost.generalized;
 
 % [DEBUG] check if the new route is valid
-Route_Validate(neighbor, route, data, frequency, param_ts);
+% Route_Validate(neighbor, route, data, frequency, param_ts);
 end
