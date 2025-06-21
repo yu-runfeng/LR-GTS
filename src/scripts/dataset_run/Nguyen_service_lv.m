@@ -23,7 +23,7 @@ for i = 1:length(file_list)
         continue
     end
 
-    for srv_lv = [0.8, 0.85, 0.9, 0.95]
+    for srv_lv = [0.75, 0.8, 0.85, 0.9, 0.95]
         data.srv_lv = srv_lv;
         for run_time = 1:10
             rng(run_time);
