@@ -11,7 +11,7 @@ param_lr.ITER_SEARCH = 40; % local search iteration
 param_lr.ITER_UNIMP = 500; % unimproved iteration
 param_lr.LR_GAP = 0.03; % acceptable gap
 param_lr.TIME_LIMIT = 100; % time limit
-param_lr.PRINT_FLAG = true; % print log
+param_lr.PRINT_FLAG = false; % print log
 
 % LR parameters for case study
 % param_lr.STEP_SCALAR = 20; % step scalar
@@ -45,7 +45,7 @@ param_ts.ITER_MAX = ceil(data.num_cus*4); % maximum iteration
 param_ts.PRINT_FLAG = false;
 
 % parameters in LR-GTS
-param_lr_gts.ITER_UNIMP = 50; % uninproved interation
+param_lr_gts.ITER_UNIMP = ceil(max(50, data.num_cus/2)); % unimproved iteration
 param_lr_gts.TIME_LIMIT = 1200; % time limit
 
 % sort fields
