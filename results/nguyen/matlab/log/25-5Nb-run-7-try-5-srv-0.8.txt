@@ -1,0 +1,775 @@
+-------------------------------------------------------------------
+LR-GTS by Runfeng Yu
+Param setting: 
+       ITER_MAX: 10000
+    ITER_SEARCH: 40
+     ITER_UNIMP: 500
+         LR_GAP: 0.0300
+     PRINT_FLAG: 0
+       STEP_DEC: 1.0500
+       STEP_MIN: 0.0020
+    STEP_SCALAR: 2
+     TIME_LIMIT: 100
+
+               DIV: 2
+     DIV_ITER_RAND: 2
+    DIV_ITER_UNIMP: 10
+               GRN: 7.6052e+03
+           GRN_INC: 1.8000
+    GRN_ITER_UNIMP: 1
+        INTER_FEAS: 8
+        INTER_INFS: 2
+          ITER_MAX: 100
+        ITER_UNIMP: 50
+               PEN: 1.1022e+03
+           PEN_DEC: 0.8000
+           PEN_INC: 1.2000
+           PEN_MAX: 1817700
+           PEN_MIN: 0.1000
+        PRINT_FLAG: 0
+          TABU_MAX: 5
+          TABU_MIN: 3
+
+-------------------------------------------------------------------
+LR  Iter: 0006 UB: 1099301.13 Const: 2.000000 Gap:  2.94%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001803 seconds
+LR  Iter: 0007 UB:  960989.13 Const: 2.000000 Gap:  2.94%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001939 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171813.00
+LR  Iter: 0007 UB:  944548.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001907 seconds
+Unimproved count:   0 Global Best Objective value: 944548.03
+Elapsed time is 0.050229 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171693.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002724 seconds
+Unimproved count:   0 Global Best Objective value: 944428.03
+Elapsed time is 0.090891 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171693.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002042 seconds
+LR  Iter: 0007 UB:  961973.03 Const: 2.000000 Gap:  2.71%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001900 seconds
+Unimproved count:   1 Global Best Objective value: 944428.03
+Elapsed time is 0.140660 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 174608.00
+LR  Iter: 0007 UB:  947343.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002114 seconds
+LR  Iter: 0007 UB:  958205.03 Const: 2.000000 Gap:  2.73%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001888 seconds
+Unimproved count:   2 Global Best Objective value: 944428.03
+Elapsed time is 0.185023 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 174608.00
+LR  Iter: 0007 UB:  947343.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004461 seconds
+LR  Iter: 0007 UB:  958205.03 Const: 2.000000 Gap:  2.73%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001985 seconds
+Unimproved count:   3 Global Best Objective value: 944428.03
+Elapsed time is 0.226736 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172967.20
+LR  Iter: 0006 UB:  945702.23 Const: 2.000000 Gap:  2.98%
+Location: 
+     2     4     5
+
+Elapsed time is 0.240918 seconds
+LR  Iter: 0006 UB:  959162.23 Const: 2.000000 Gap:  2.94%
+Location: 
+     2     4     5
+
+Elapsed time is 0.074485 seconds
+Unimproved count:   4 Global Best Objective value: 944428.03
+Elapsed time is 0.823398 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173038.20
+LR  Iter: 0006 UB:  945773.23 Const: 2.000000 Gap:  2.98%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002727 seconds
+LR  Iter: 0007 UB:  979977.03 Const: 2.000000 Gap:  2.67%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002669 seconds
+Unimproved count:   5 Global Best Objective value: 944428.03
+Elapsed time is 0.881217 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172859.00
+LR  Iter: 0007 UB:  945594.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002287 seconds
+LR  Iter: 0007 UB:  953337.03 Const: 2.000000 Gap:  2.74%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002161 seconds
+Unimproved count:   6 Global Best Objective value: 944428.03
+Elapsed time is 0.931942 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171823.00
+LR  Iter: 0007 UB:  944558.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002026 seconds
+LR  Iter: 0007 UB:  966200.03 Const: 2.000000 Gap:  2.90%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001960 seconds
+Unimproved count:   7 Global Best Objective value: 944428.03
+Elapsed time is 0.976370 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172517.00
+LR  Iter: 0007 UB:  945252.03 Const: 2.000000 Gap:  2.96%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002098 seconds
+LR  Iter: 0007 UB:  993205.03 Const: 2.000000 Gap:  2.82%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002063 seconds
+Unimproved count:   8 Global Best Objective value: 944428.03
+Elapsed time is 1.022260 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172264.00
+LR  Iter: 0007 UB:  944999.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003214 seconds
+LR  Iter: 0007 UB: 1002630.03 Const: 2.000000 Gap:  2.60%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002651 seconds
+Unimproved count:   9 Global Best Objective value: 944428.03
+Elapsed time is 1.066510 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173018.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004254 seconds
+LR  Iter: 0007 UB:  984850.03 Const: 2.000000 Gap:  2.65%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003796 seconds
+Unimproved count:  10 Global Best Objective value: 944428.03
+Elapsed time is 1.119173 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 176107.00
+LR  Iter: 0007 UB:  948842.03 Const: 2.000000 Gap:  2.75%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003892 seconds
+LR  Iter: 0007 UB:  957180.03 Const: 2.000000 Gap:  2.73%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003409 seconds
+Unimproved count:  11 Global Best Objective value: 944428.03
+Elapsed time is 1.168195 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173699.00
+LR  Iter: 0007 UB:  946434.03 Const: 2.000000 Gap:  2.96%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002581 seconds
+LR  Iter: 0006 UB:  965747.83 Const: 2.000000 Gap:  2.92%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001641 seconds
+Unimproved count:  12 Global Best Objective value: 944428.03
+Elapsed time is 1.236591 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 176677.00
+LR  Iter: 0007 UB:  949412.03 Const: 2.000000 Gap:  2.75%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001948 seconds
+LR  Iter: 0007 UB:  973378.03 Const: 2.000000 Gap:  2.68%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004131 seconds
+Unimproved count:  13 Global Best Objective value: 944428.03
+Elapsed time is 1.286016 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173124.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001991 seconds
+LR  Iter: 0007 UB:  972591.03 Const: 2.000000 Gap:  2.69%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001965 seconds
+Unimproved count:  14 Global Best Objective value: 944428.03
+Elapsed time is 1.330278 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171693.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003198 seconds
+LR  Iter: 0007 UB:  953094.03 Const: 2.000000 Gap:  2.94%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002731 seconds
+Unimproved count:  15 Global Best Objective value: 944428.03
+Elapsed time is 1.376892 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171693.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002805 seconds
+LR  Iter: 0007 UB:  980735.03 Const: 2.000000 Gap:  2.66%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002343 seconds
+Unimproved count:  16 Global Best Objective value: 944428.03
+Elapsed time is 1.422397 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171813.00
+LR  Iter: 0007 UB:  944548.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002927 seconds
+LR  Iter: 0007 UB:  959940.03 Const: 2.000000 Gap:  2.92%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002600 seconds
+Unimproved count:  17 Global Best Objective value: 944428.03
+Elapsed time is 1.469500 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171799.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002161 seconds
+LR  Iter: 0007 UB:  970673.03 Const: 2.000000 Gap:  2.68%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001933 seconds
+Unimproved count:  18 Global Best Objective value: 944428.03
+Elapsed time is 1.505469 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173018.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004232 seconds
+LR  Iter: 0007 UB:  976223.03 Const: 2.000000 Gap:  2.68%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001932 seconds
+Unimproved count:  19 Global Best Objective value: 944428.03
+Elapsed time is 1.546708 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172081.20
+LR  Iter: 0006 UB:  944816.23 Const: 2.000000 Gap:  2.98%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001852 seconds
+LR  Iter: 0007 UB:  981702.03 Const: 2.000000 Gap:  2.66%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004260 seconds
+Unimproved count:  20 Global Best Objective value: 944428.03
+Elapsed time is 1.588502 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173018.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003548 seconds
+LR  Iter: 0007 UB:  972924.03 Const: 2.000000 Gap:  2.69%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004616 seconds
+Unimproved count:  21 Global Best Objective value: 944428.03
+Elapsed time is 1.638054 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173018.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002113 seconds
+LR  Iter: 0007 UB:  956411.03 Const: 2.000000 Gap:  2.73%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001916 seconds
+Unimproved count:  22 Global Best Objective value: 944428.03
+Elapsed time is 1.683493 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172963.00
+LR  Iter: 0007 UB:  945124.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002244 seconds
+LR  Iter: 0007 UB: 1003554.03 Const: 2.000000 Gap:  2.60%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002795 seconds
+Unimproved count:  23 Global Best Objective value: 944428.03
+Elapsed time is 1.727362 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 175680.00
+LR  Iter: 0007 UB:  948415.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003337 seconds
+LR  Iter: 0007 UB:  949120.03 Const: 2.000000 Gap:  2.75%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001996 seconds
+Unimproved count:  24 Global Best Objective value: 944428.03
+Elapsed time is 1.774753 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173018.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001786 seconds
+LR  Iter: 0007 UB:  971977.03 Const: 2.000000 Gap:  2.69%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002743 seconds
+Unimproved count:  25 Global Best Objective value: 944428.03
+Elapsed time is 1.816933 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172761.00
+LR  Iter: 0007 UB:  945496.03 Const: 2.000000 Gap:  2.96%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003295 seconds
+LR  Iter: 0007 UB:  948233.03 Const: 2.000000 Gap:  2.96%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002658 seconds
+Unimproved count:  26 Global Best Objective value: 944428.03
+Elapsed time is 1.861791 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172761.00
+LR  Iter: 0007 UB:  945496.03 Const: 2.000000 Gap:  2.96%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002269 seconds
+LR  Iter: 0007 UB:  957896.03 Const: 2.000000 Gap:  2.72%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001972 seconds
+Unimproved count:  27 Global Best Objective value: 944428.03
+Elapsed time is 1.903614 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172761.00
+LR  Iter: 0007 UB:  945496.03 Const: 2.000000 Gap:  2.96%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002263 seconds
+LR  Iter: 0007 UB:  984070.03 Const: 2.000000 Gap:  2.65%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003416 seconds
+Unimproved count:  28 Global Best Objective value: 944428.03
+Elapsed time is 1.947132 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173124.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004372 seconds
+LR  Iter: 0007 UB:  950512.03 Const: 2.000000 Gap:  2.75%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002611 seconds
+Unimproved count:  29 Global Best Objective value: 944428.03
+Elapsed time is 1.992798 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172859.00
+LR  Iter: 0007 UB:  945594.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002625 seconds
+LR  Iter: 0007 UB:  965296.03 Const: 2.000000 Gap:  2.71%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002549 seconds
+Unimproved count:  30 Global Best Objective value: 944428.03
+Elapsed time is 2.038549 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172879.00
+LR  Iter: 0007 UB:  945614.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004071 seconds
+LR  Iter: 0007 UB:  958286.03 Const: 2.000000 Gap:  2.73%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002077 seconds
+Unimproved count:  31 Global Best Objective value: 944428.03
+Elapsed time is 2.090215 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 174919.00
+LR  Iter: 0007 UB:  947654.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.005202 seconds
+LR  Iter: 0007 UB:  967621.03 Const: 2.000000 Gap:  2.70%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002933 seconds
+Unimproved count:  32 Global Best Objective value: 944428.03
+Elapsed time is 2.139237 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173661.00
+LR  Iter: 0007 UB:  946396.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002493 seconds
+LR  Iter: 0007 UB:  950643.03 Const: 2.000000 Gap:  2.75%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003382 seconds
+Unimproved count:  33 Global Best Objective value: 944428.03
+Elapsed time is 2.178905 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172264.00
+LR  Iter: 0007 UB:  944999.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002092 seconds
+LR  Iter: 0007 UB:  969347.03 Const: 2.000000 Gap:  2.69%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002247 seconds
+Unimproved count:  34 Global Best Objective value: 944428.03
+Elapsed time is 2.218805 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172859.00
+LR  Iter: 0007 UB:  945594.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002743 seconds
+LR  Iter: 0007 UB:  968399.03 Const: 2.000000 Gap:  2.70%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002428 seconds
+Unimproved count:  35 Global Best Objective value: 944428.03
+Elapsed time is 2.270788 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 174023.00
+LR  Iter: 0007 UB:  946758.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002808 seconds
+LR  Iter: 0007 UB:  961716.03 Const: 2.000000 Gap:  2.72%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002508 seconds
+Unimproved count:  36 Global Best Objective value: 944428.03
+Elapsed time is 2.312543 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172859.00
+LR  Iter: 0007 UB:  945594.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002091 seconds
+LR  Iter: 0007 UB:  971252.03 Const: 2.000000 Gap:  2.69%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003850 seconds
+Unimproved count:  37 Global Best Objective value: 944428.03
+Elapsed time is 2.359809 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173018.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002125 seconds
+LR  Iter: 0007 UB:  955463.03 Const: 2.000000 Gap:  2.73%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001909 seconds
+Unimproved count:  38 Global Best Objective value: 944428.03
+Elapsed time is 2.400962 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171693.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003130 seconds
+LR  Iter: 0007 UB: 1002546.03 Const: 2.000000 Gap:  2.60%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003470 seconds
+Unimproved count:  39 Global Best Objective value: 944428.03
+Elapsed time is 2.449843 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171813.00
+LR  Iter: 0007 UB:  944548.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001982 seconds
+LR  Iter: 0007 UB:  966040.03 Const: 2.000000 Gap:  2.90%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002007 seconds
+Unimproved count:  40 Global Best Objective value: 944428.03
+Elapsed time is 2.492748 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172332.00
+LR  Iter: 0007 UB:  945067.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001979 seconds
+LR  Iter: 0007 UB:  945067.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002357 seconds
+Unimproved count:  41 Global Best Objective value: 944428.03
+Elapsed time is 2.543492 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172332.00
+LR  Iter: 0007 UB:  945067.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002125 seconds
+LR  Iter: 0007 UB:  983083.03 Const: 2.000000 Gap:  2.65%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002842 seconds
+Unimproved count:  42 Global Best Objective value: 944428.03
+Elapsed time is 2.584470 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172264.00
+LR  Iter: 0007 UB:  944999.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004906 seconds
+LR  Iter: 0007 UB:  961348.03 Const: 2.000000 Gap:  2.71%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002556 seconds
+Unimproved count:  43 Global Best Objective value: 944428.03
+Elapsed time is 2.630157 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172859.00
+LR  Iter: 0007 UB:  945594.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002220 seconds
+LR  Iter: 0007 UB:  951372.03 Const: 2.000000 Gap:  2.75%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001786 seconds
+Unimproved count:  44 Global Best Objective value: 944428.03
+Elapsed time is 2.681984 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173018.00
+LR  Iter: 0007 UB:  945753.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001817 seconds
+LR  Iter: 0007 UB:  972151.03 Const: 2.000000 Gap:  2.69%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001785 seconds
+Unimproved count:  45 Global Best Objective value: 944428.03
+Elapsed time is 2.725888 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172869.20
+LR  Iter: 0006 UB:  945604.23 Const: 2.000000 Gap:  2.98%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001790 seconds
+LR  Iter: 0007 UB:  980394.03 Const: 2.000000 Gap:  2.67%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001917 seconds
+Unimproved count:  46 Global Best Objective value: 944428.03
+Elapsed time is 2.768952 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172879.00
+LR  Iter: 0007 UB:  945614.03 Const: 2.000000 Gap:  2.76%
+Location: 
+     2     4     5
+
+Elapsed time is 0.055115 seconds
+LR  Iter: 0007 UB:  969588.03 Const: 2.000000 Gap:  2.69%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002978 seconds
+Unimproved count:  47 Global Best Objective value: 944428.03
+Elapsed time is 2.871876 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 173389.20
+LR  Iter: 0006 UB:  946124.23 Const: 2.000000 Gap:  2.98%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002898 seconds
+LR  Iter: 0007 UB:  956210.03 Const: 2.000000 Gap:  2.73%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002157 seconds
+Unimproved count:  48 Global Best Objective value: 944428.03
+Elapsed time is 2.915486 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171693.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.004675 seconds
+LR  Iter: 0007 UB:  995487.03 Const: 2.000000 Gap:  2.61%
+Location: 
+     2     4     5
+
+Elapsed time is 0.003845 seconds
+Unimproved count:  49 Global Best Objective value: 944428.03
+Elapsed time is 2.968549 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 171693.00
+LR  Iter: 0007 UB:  944428.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002813 seconds
+LR  Iter: 0007 UB:  984634.03 Const: 2.000000 Gap:  2.65%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002489 seconds
+Unimproved count:  50 Global Best Objective value: 944428.03
+Elapsed time is 3.015751 seconds
+-------------------------------------------------------------------
+GTS Iter: 0100 BKSCost: 172359.00
+LR  Iter: 0007 UB:  945094.03 Const: 2.000000 Gap:  2.97%
+Location: 
+     2     4     5
+
+Elapsed time is 0.002030 seconds
+LR  Iter: 0007 UB:  976314.83 Const: 2.000000 Gap:  2.89%
+Location: 
+     2     4     5
+
+Elapsed time is 0.001915 seconds
+Elapsed time is 3.068762 seconds
+Total: 944428.0344
