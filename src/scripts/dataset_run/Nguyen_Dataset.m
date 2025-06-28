@@ -1,4 +1,4 @@
-% Run Nguyen's data set
+% Run Nguyen's data set with default parameters
 % source: http://prodhonc.free.fr/Instances/instancesLRP2E_us.htm
 % see /src/data_reader/Read_Nguyen.m for more data generation details
 % (c) Copyright 2025 Runfeng Yu

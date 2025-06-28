@@ -1,4 +1,4 @@
-% Run Nguyen's data set with varied service level
+% Run Nguyen's data set with varied max try times
 % source: http://prodhonc.free.fr/Instances/instancesLRP2E_us.htm
 % see /src/data_reader/Read_Nguyen.m for more data generation details
 % (c) Copyright 2025 Runfeng Yu
@@ -22,21 +22,20 @@ for i = 1:length(data_list)
     data = Read_Nguyen([data_path, file_name]);
     [param_lr, param_ts, param_lr_gts] = Param_Setting(data);
 
-    for srv_lv = [0.75, 0.8, 0.85, 0.9, 0.95]
-        data.srv_lv = srv_lv;
+    for max_try = [2, 3, 4, 5, 6]
+        data.max_try = max_try;
 
         for run_time = 1:10
             rng(run_time);
 
             disp([file_name(1:end - 4), '-r-', num2str(run_time)]);
             log_name = [file_name(1:end - 4), ...
-                '-r-', num2str(run_time), ...
-                '-srv-', num2str(srv_lv), '.txt'];
+                '-run-', num2str(run_time), ...
+                '-try-', num2str(max_try), '.txt'];
             disp(log_name);
 
             id_name = log_name(1:end - 4);
 
-            
             % if log file and mat file both exist, skip it
             if any(contains(result_log, id_name)) && ...
                     any(contains(result_mat, id_name))
