@@ -1,7 +1,7 @@
 function best_sol = Lagrangian_Relaxation(data, super_customers, param_lr)
 % LAGRANGIAN_RELAXATION Lagrangian relaxation for the reformulated model
 % (c) Copyright 2025 Runfeng Yu
-tic
+
 % initialize
 multipliers = Multipliers_Init(data, super_customers.num);
 best_sol = Ub_Init(data, super_customers);
@@ -18,8 +18,6 @@ format_spec = 'LR  Iter: %04d UB: %10.2f Const: %8.6f Gap: %5.2f%%\n';
 for iter = 1:param_lr.ITER_MAX
     % lower bound
     l_bound = Lb_Get_Value(data, super_customers, multipliers);
-    upd_dir = Multipliers_Get_Dir(multipliers, l_bound, data);
-
     if l_bound.value > best_lb_val
         best_lb_val = l_bound.value;
     end
@@ -31,7 +29,6 @@ for iter = 1:param_lr.ITER_MAX
         is_in_history = isKey(history_sol, key_hash);
         if is_in_history
             temp_cell = lookup(history_sol, key_hash);
-            coder.noImplicitExpansionInFunction();
             if any(temp_cell{1}.binary_location ~= l_bound.binary_location)
                 is_in_history = false; % hash collision
             end
@@ -45,6 +42,10 @@ for iter = 1:param_lr.ITER_MAX
         else
             temp_cell = lookup(history_sol, key_hash);
             u_bound = temp_cell{1};
+
+            % [DEBUG]
+            % test = Ub_Get_Value(data, super_customers, l_bound.binary_location);
+            % assert(test.value == u_bound.value);
         end
 
         counter_local_search = counter_local_search + 1;
@@ -63,8 +64,8 @@ for iter = 1:param_lr.ITER_MAX
     end
 
     % update
-    multipliers = Multipliers_Update(multipliers, upd_dir, best_sol.value, ...
-        l_bound.value, step_scalar);
+    multipliers = Multipliers_Update(multipliers, l_bound, best_sol.value, ...
+        step_scalar);
 
     if counter_ub_remain > param_lr.ITER_UNIMP
         step_scalar = step_scalar / param_lr.STEP_DEC;
@@ -85,14 +86,12 @@ for iter = 1:param_lr.ITER_MAX
     if gap < param_lr.LR_GAP
         Print_Log(format_spec, iter, best_sol.value, ...
             best_sol.binary_location, step_scalar, gap, 1);
-        toc
         return
     end
 
     if step_scalar < param_lr.STEP_MIN
         Print_Log(format_spec, iter, best_sol.value, ...
             best_sol.binary_location, step_scalar, gap, 2);
-        toc
         return
     end
 
@@ -100,18 +99,15 @@ for iter = 1:param_lr.ITER_MAX
     if elapsed_time > param_lr.TIME_LIMIT
         Print_Log(format_spec, iter, best_sol.value, ...
             best_sol.binary_location, step_scalar, gap, 3);
-        toc
         return
     end
 
     if iter == param_lr.ITER_MAX
         Print_Log(format_spec, iter, best_sol.value, ...
             best_sol.binary_location, step_scalar, gap, 4);
-        toc
         return
     end
 end
-toc
 end
 
 function Print_Log(format_spec, iter, sol_value, binary_location, ...
