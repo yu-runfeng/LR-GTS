@@ -1,5 +1,5 @@
-function data = Read_Snyder_As_Os(file_path)
-% READ_SNYDER_AS_OS Read OS channel problem from Snyder's dataset
+function data = Read_Snyder(file_path)
+% READ_SNYDER Read from Snyder's dataset
 % (c) Copyright 2025 Runfeng Yu
 
 cost = load([file_path, 'cost.csv']);
@@ -20,9 +20,9 @@ assert(size(cost, 1) == size(cost, 2));
 
 data = struct();
 data.coef_penalty = coef_penalty;
-data.coef_os = 1;
+data.coef_bops = 1;
 data.dist_snd_layer = repmat(cost, 2, 1);
-data.dmd_os = demand;
+data.dmd_bops = demand;
 data.farthest = 1e7;
 data.fixed_store = fixed_cost;
 data.ind_store = 1:num_store;
