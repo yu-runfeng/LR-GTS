@@ -17,8 +17,6 @@ best_feasible_route = route;
 tabu_list = Tabu_List_Init();
 max_granularity = max(data.dist_snd_layer, [], "all");
 
-format_spec_debug = "Iter: %04d Rnd: %d CuCost: %.2f BKSCost: %.2f UnGlbCt: %d ', 'UnGrnCt: %d FsCt: %d InFsCt: %d PenCap: %.2f\n";
-
 % counter
 unimproved_global_count = 0;
 unimproved_granular_count = 0;
@@ -132,20 +130,6 @@ for iter = 1:param_ts.ITER_MAX
         is_random_status = true;
     end
 
-    % [DEBUG] print information
-    % if param_ts.PRINT_FLAG
-    %     fprintf(format_spec_debug, ...
-    %         int64(iter), ...
-    %         int64(is_random_status), ...
-    %         current_route.cost.total, ...
-    %         best_feasible_route.cost.total, ...
-    %         int64(unimproved_global_count), ...
-    %         int64(unimproved_granular_count), ...
-    %         int64(feasible_count), ...
-    %         int64(infeasible_count), ...
-    %         param_ts.PEN);
-    % end
-
     % terminate condition
     if unimproved_global_count >= param_ts.ITER_UNIMP
         iter_rec = iter;
@@ -155,8 +139,8 @@ for iter = 1:param_ts.ITER_MAX
 end
 
 % print GTS conclusion
-format_spec = 'GTS Iter: %04d BKSCost: %.2f\n';
-fprintf(format_spec, int64(iter_rec), best_feasible_route.cost.total);
+fprintf('GTS Iter: %04d BKSCost: %.2f\n', ...
+    int64(iter_rec), best_feasible_route.cost.total);
 
 % convert the best feasible route to the super-customer
 num = length(best_feasible_route.waypoints);
