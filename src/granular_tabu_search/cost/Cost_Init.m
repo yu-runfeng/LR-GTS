@@ -6,7 +6,6 @@ x = zeros(0, 1);
 coder.varsize("x");
 
 cost = struct();
-cost.trans = x;
 cost.fixed = x;
 cost.route = x;
 
