@@ -82,8 +82,6 @@ function [neighbor, break_arcs, best_general_cost] = Exchange_Cus(route, ...
     route_ind, is_random)
 % Exchange two customers within a route
 
-coder.inline("always");
-
 % initialization
 neighbor = route;
 break_arcs = zeros(4, 2);
@@ -120,7 +118,6 @@ end
 function info = Get_Exchange_Info()
 % Get exchange information
 
-coder.inline("always");
 info = struct();
 info.ind = 0;
 info.cus = 0;
@@ -132,8 +129,6 @@ function [neighbor, arcs, general_cost] = Update_Neighbor(data, route, ...
     route_len, route_ind, tabu_list, fst, snd, employ_num, frequency, ...
     frequency_sum, param_ts, is_random, neighbor, arcs, general_cost)
 % Update the neighbor route and cost
-
-coder.inline("always");
 
 % newly connected arcs and tabu condition
 new_arc = [fst.before, snd.cus; snd.cus, fst.after; ...

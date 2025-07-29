@@ -14,8 +14,6 @@ function cost = Update_Intro_Cost(cost, data, route, changed_ind, ...
 
 % transportation cost and fixed cost do not change in intro-route operation
 
-coder.inline("always");
-
 % update route cost
 old_route_cost = cost.route(changed_ind);
 cost.route(changed_ind) = changed_len * data.coef_sfs;

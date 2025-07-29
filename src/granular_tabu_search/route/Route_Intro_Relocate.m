@@ -76,8 +76,6 @@ function [neighbor, break_arcs, best_general_cost] = Relocate_Cus( ...
     route_ind, is_random)
 % Relocate a customer within a route
 
-coder.inline("always");
-
 % initialization
 neighbor = route;
 break_arcs = zeros(3, 2);
@@ -112,7 +110,6 @@ end
 function info = Get_Relocate_Info()
 % Get relocate information
 
-coder.inline("always");
 info = struct();
 info.cus = 0;
 info.old_before = 0;
@@ -124,8 +121,6 @@ function [neighbor, arcs, general_cost] = Update_Neighbor(data, route, ...
     route_len, route_ind, tabu_list, route_info, route_copy, employ_num, ...
     frequency, frequency_sum, param_ts, is_random, neighbor, arcs, general_cost)
 % Update the neighbor route and cost
-
-coder.inline("always");
 
 % before node and after node of the position
 new_before = route_copy(route_info.pos_ind);
