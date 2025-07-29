@@ -4,7 +4,7 @@
 clc;
 clear all;
 
-file_path = './data/tuzun/coordP111112.dat';
+file_path = '../../data/tuzun/coordP111112.dat';
 data = Read_Tuzun(file_path);
 
 [param_lr, param_ts, param_lr_gts] = Param_Setting(data);
