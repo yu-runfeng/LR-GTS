@@ -1,5 +1,5 @@
-function data = Read_Snyder_As_Os(file_path)
-% READ_SNYDER_AS_OS Read OS channel problem from Snyder's dataset
+function data = Read_Snyder(file_path)
+% READ_SNYDER Read from Snyder's dataset
 % (c) Copyright 2025 Runfeng Yu
 
 cost = load([file_path, 'cost.csv']);
