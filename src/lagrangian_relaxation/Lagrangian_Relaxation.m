@@ -1,10 +1,10 @@
-function best_sol = Lagrangian_Relaxation(data, super_customers, param_lr)
+function best_sol = Lagrangian_Relaxation(data, param_lr)
 % LAGRANGIAN_RELAXATION Lagrangian relaxation for the reformulated model
 % (c) Copyright 2025 Runfeng Yu
 tic
 % initialize
-multipliers = Multipliers_Init(data, super_customers.num);
-best_sol = Ub_Init(data, super_customers);
+multipliers = Multipliers_Init(data);
+best_sol = Ub_Init(data);
 best_sol.value = inf;
 best_lb_val = -inf;
 
@@ -17,9 +17,7 @@ start_time = tic;
 format_spec = 'LR  Iter: %04d UB: %10.2f Const: %8.6f Gap: %5.2f%%\n';
 for iter = 1:param_lr.ITER_MAX
     % lower bound
-    l_bound = Lb_Get_Value(data, super_customers, multipliers);
-    upd_dir = Multipliers_Get_Dir(multipliers, l_bound, data);
-
+    l_bound = Lb_Get_Value(data, multipliers);
     if l_bound.value > best_lb_val
         best_lb_val = l_bound.value;
     end
@@ -39,12 +37,16 @@ for iter = 1:param_lr.ITER_MAX
 
         if ~is_in_history || iter == 1
             u_bound = ...
-                Ub_Get_Value(data, super_customers, l_bound.binary_location);
+                Ub_Get_Value(data, l_bound.binary_location);
             u_bound = ...
-                Ub_Improve(u_bound, data, super_customers, l_bound, param_lr);
+                Ub_Improve(u_bound, data, l_bound, param_lr);
         else
             temp_cell = lookup(history_sol, key_hash);
             u_bound = temp_cell{1};
+
+            % [DEBUG]
+            % test = Ub_Get_Value(data, l_bound.binary_location);
+            % assert(test.value == u_bound.value);
         end
 
         counter_local_search = counter_local_search + 1;
@@ -52,7 +54,7 @@ for iter = 1:param_lr.ITER_MAX
             is_local_search = false;
         end
     else
-        u_bound = Ub_Get_Value(data, super_customers, l_bound.binary_location);
+        u_bound = Ub_Get_Value(data, l_bound.binary_location);
     end
 
     if u_bound.value < best_sol.value
@@ -63,8 +65,8 @@ for iter = 1:param_lr.ITER_MAX
     end
 
     % update
-    multipliers = Multipliers_Update(multipliers, upd_dir, best_sol.value, ...
-        l_bound.value, step_scalar);
+    multipliers = Multipliers_Update(multipliers, l_bound, best_sol.value, ...
+        step_scalar);
 
     if counter_ub_remain > param_lr.ITER_UNIMP
         step_scalar = step_scalar / param_lr.STEP_DEC;
