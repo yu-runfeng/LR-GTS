@@ -13,17 +13,6 @@ param_lr.LR_GAP = 0.03; % acceptable gap
 param_lr.TIME_LIMIT = 100; % time limit
 param_lr.PRINT_FLAG = false; % print log
 
-% LR parameters for case study
-% param_lr.STEP_SCALAR = 20; % step scalar
-% param_lr.STEP_DEC = 1.1; % step scalar decrease scaling
-% param_lr.STEP_MIN = 0.002; % minimal step scalar
-% param_lr.ITER_MAX = 10000; % maximum LR iteration
-% param_lr.ITER_SEARCH = 10; % local search iteration
-% param_lr.ITER_UNIMP = 500; % unimproved iteration
-% param_lr.LR_GAP = 0.03; % acceptable gap
-% param_lr.TIME_LIMIT = 1000; % time limit
-% param_lr.PRINT_FLAG = false; % print log
-
 % GTS parameters
 param_ts.TABU_MAX = ceil(data.num_cus*0.20); % maximum length of tabu list
 param_ts.TABU_MIN = ceil(data.num_cus*0.10); % manimum length of tabu list
@@ -41,11 +30,11 @@ param_ts.DIV = 2; % diversity parameter
 param_ts.DIV_ITER_RAND = ceil(0.08*data.num_cus); % random move iteration
 param_ts.DIV_ITER_UNIMP = ceil(data.num_cus*0.4); % uninproved interation
 param_ts.ITER_UNIMP = ceil(data.num_cus*2); % uninproved interation
-param_ts.ITER_MAX = ceil(data.num_cus*4); % maximum iteration
+param_ts.ITER_MAX = ceil(data.num_cus*5); % maximum iteration
 param_ts.PRINT_FLAG = false;
 
-% parameters in LR-GTS
-param_lr_gts.ITER_UNIMP = ceil(max(50, data.num_cus/2)); % unimproved iteration
+% LR-GTS parameters
+param_lr_gts.ITER_UNIMP = ceil(data.num_cus/2); % uninproved interation
 param_lr_gts.TIME_LIMIT = 1200; % time limit
 
 % sort fields
