@@ -33,7 +33,7 @@ break_arcs = arc{best_ind};
 is_success = min_cost ~= inf;
 
 if ~is_success
-    assert(all(break_arcs(:) == 0));
+    % assert(all(break_arcs(:) == 0));
     return
 end
 

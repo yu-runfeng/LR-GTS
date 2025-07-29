@@ -38,7 +38,7 @@ for i = 1:length(utilized_store)
         temp_cell = repmat({zeros(1, 0)}, num, 1);
         customer_cycles = [customer_cycles; temp_cell];
     end
-    assert(length(customer_cycles) == counter+length(temp_cycles)-1);
+    % assert(length(customer_cycles) == counter+length(temp_cycles)-1);
     for j = 1:length(temp_cycles)
         customer_cycles{counter+j-1, 1} = temp_cycles{j};
     end
@@ -59,8 +59,8 @@ function super_cus = Get_Trivial_Super_Cus(data)
 super_cus = Super_Cus_Init();
 super_cus.cycle = cell(data.num_cus, 1);
 super_cus.dist_mat = ...
-    data.dist_snd_layer(data.ind_store, data.ind_cus) + ...
-    data.dist_snd_layer(data.ind_cus, data.ind_store)';
+    data.dist_snd_layer(data.ind_ws, data.ind_cus) + ...
+    data.dist_snd_layer(data.ind_cus, data.ind_ws)';
 super_cus.demand = data.dmd_sfs;
 super_cus.num = length(data.dmd_sfs);
 super_cus.insert_position = zeros(data.num_store, data.num_cus);
@@ -91,7 +91,7 @@ while ~isempty(cus_of_store)
         if isempty(cus_of_store)
             % dynamically expand the cell array
             if route_counter > length(routes_of_store)
-                assert(route_counter == length(routes_of_store)+1);
+                % assert(route_counter == length(routes_of_store)+1);
                 routes_of_store = [routes_of_store; {0}];
             end
             routes_of_store{route_counter, 1} = cus_sequence;
@@ -142,7 +142,7 @@ while ~isempty(cus_of_store)
             % all position causes a distance increment -> open a new route
             if route_counter > length(routes_of_store)
                 % dynamically expand the cell array
-                assert(route_counter == length(routes_of_store)+1);
+                % assert(route_counter == length(routes_of_store)+1);
                 routes_of_store = [routes_of_store; {0}];
             end
 

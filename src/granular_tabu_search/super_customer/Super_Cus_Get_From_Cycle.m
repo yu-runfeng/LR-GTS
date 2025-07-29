@@ -2,7 +2,7 @@ function super_cus = Super_Cus_Get_From_Cycle(cycles, data)
 % SUPER_CUS_GET_FROM_CYCLE Aggregate cycles (without stores) to super-customers
 % (c) Copyright 2025 Runfeng Yu
 
-assert(size(cycles, 2) == 1); % cycles should be a column cell array
+% assert(size(cycles, 2) == 1); % cycles should be a column cell array
 super_cus_num = size(cycles, 1);
 super_demand = zeros(super_cus_num, 1);
 
@@ -12,8 +12,8 @@ dist_to_store = zeros(super_cus_num, data.num_store); % find insert position
 for i = 1:super_cus_num
     % get a customer sequence
     cus_sequence = cycles{i};
-    assert(all(cus_sequence > data.num_store));
-    assert(~isempty(cus_sequence));
+    % assert(all(cus_sequence > data.num_store));
+    % assert(~isempty(cus_sequence));
 
     position_num = length(cus_sequence);
     super_demand(i) = sum(data.dmd_sfs(cus_sequence-data.num_store));

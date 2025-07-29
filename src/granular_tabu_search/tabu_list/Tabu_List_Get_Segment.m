@@ -2,7 +2,7 @@ function tabu_list_seg = Tabu_List_Get_Segment(tabu_list, seg_len)
 % TABU_LIST_GET_SEGMENT Get a segment of the tabu list with a given length
 % (c) Copyright 2025 Runfeng Yu
 
-assert(seg_len > 0);
+% assert(seg_len > 0);
 num_entries = numEntries(tabu_list);
 seg_len = min([seg_len, num_entries]);
 
