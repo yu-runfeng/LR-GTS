@@ -4,7 +4,7 @@
 clc;
 clear all;
 
-data = Read_Nguyen('./data/nguyen/25-5MNb.txt');
+data = Read_Nguyen('../../data/nguyen/25-5MNb.txt');
 
 [param_lr, param_ts, param_lr_gts] = Param_Setting(data);
 
