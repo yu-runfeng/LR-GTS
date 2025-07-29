@@ -59,8 +59,8 @@ function super_cus = Get_Trivial_Super_Cus(data)
 super_cus = Super_Cus_Init();
 super_cus.cycle = cell(data.num_cus, 1);
 super_cus.dist_mat = ...
-    data.dist_snd_layer(data.ind_ws, data.ind_cus) + ...
-    data.dist_snd_layer(data.ind_cus, data.ind_ws)';
+    data.dist_snd_layer(data.ind_store, data.ind_cus) + ...
+    data.dist_snd_layer(data.ind_cus, data.ind_store)';
 super_cus.demand = data.dmd_sfs;
 super_cus.num = length(data.dmd_sfs);
 super_cus.insert_position = zeros(data.num_store, data.num_cus);
