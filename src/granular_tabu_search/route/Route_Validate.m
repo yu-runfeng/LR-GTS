@@ -20,10 +20,6 @@ for i = 1:length(new_route.waypoints)
     exceeded = max([sum_demand - data.cap_vhc, 0]);
     assert(Is_Close(exceeded, new_route.exceeded_capacity(i), 1e-4));
 
-    % cost - transportation
-    trans_cost = data.coef_trans * sum_demand * data.dist_fst_layer(r(1));
-    assert(Is_Close(trans_cost, new_route.cost.trans(i), 1e-4));
-
     % cost - fixed
     fixed_cost = data.fixed_vhc * ~isempty(customers);
     assert(Is_Close(fixed_cost, new_route.cost.fixed(i), 1e-4));
@@ -52,7 +48,7 @@ for i = 1:length(new_route.waypoints)
 end
 
 % cost total cost
-total = sum(new_route.cost.trans+new_route.cost.fixed+new_route.cost.route);
+total = sum(new_route.cost.fixed+new_route.cost.route);
 assert(Is_Close(total, new_route.cost.total, 1e-4));
 
 % cost generalized

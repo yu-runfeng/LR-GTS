@@ -124,8 +124,6 @@ end
 function info = Get_Exchange_Info()
 % Get exchange information
 
-coder.inline("always");
-
 info = struct();
 info.cus = -1;
 info.before = -1;
@@ -196,20 +194,12 @@ snd_exceed = max([snd_cap - data.cap_vhc, 0]);
 % update the new cost, fixed costs are not needed to be updated
 cost = route.cost;
 
-% update transportation cost
-cost.trans(fst_info.route_ind) = route.cost.trans(fst_info.route_ind) + ...
-    data.coef_trans * (snd_info.dmd - fst_info.dmd) * ...
-    data.dist_fst_layer(route.waypoints{fst_info.route_ind}(1));
-cost.trans(snd_info.route_ind) = route.cost.trans(snd_info.route_ind) + ...
-    data.coef_trans * (fst_info.dmd - snd_info.dmd) * ...
-    data.dist_fst_layer(route.waypoints{snd_info.route_ind}(1));
-
 % update routing cost
 cost.route(fst_info.route_ind) = fst_len * data.coef_sfs;
 cost.route(snd_info.route_ind) = snd_len * data.coef_sfs;
 
 % update total cost
-cost.total = sum(cost.trans+cost.fixed+cost.route);
+cost.total = sum(cost.fixed+cost.route);
 
 % update capacity penalty cost because param_ts.PEN is mutable
 cost.penalty_capacity(fst_info.route_ind) = param_ts.PEN * fst_exceed;

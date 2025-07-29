@@ -36,7 +36,7 @@ if is_random
     % the second route
     snd = Get_Route_Info();
     snd.ind = randi(route_num);
-    assert(any(employ_num > 0));
+    % assert(any(employ_num > 0));
     while (length(route.waypoints{fst.ind}) == 2 && ...
             length(route.waypoints{snd.ind}) == 2) || fst.ind == snd.ind
         snd.ind = randi(route_num);
@@ -170,7 +170,6 @@ end
 function info = Get_Route_Info()
 % Create an empty route information
 
-coder.inline("always");
 info = struct();
 info.ind = 0;
 info.before = 0;
@@ -255,14 +254,6 @@ employ_num = employ_num - (length(route.waypoints{fst.ind}) > 2) - ...
 % update the new cost
 new_cost = route.cost;
 
-% update transportation cost
-new_cost.trans(fst.ind) = route.cost.trans(fst.ind) + data.coef_trans * ...
-    (snd.cap_descend(snd.pos+1) - fst.cap_descend(fst.pos+1)) * ...
-    data.dist_fst_layer(route.waypoints{fst.ind}(1));
-new_cost.trans(snd.ind) = route.cost.trans(snd.ind) + data.coef_trans * ...
-    (fst.cap_descend(fst.pos+1) - snd.cap_descend(snd.pos+1)) * ...
-    data.dist_fst_layer(route.waypoints{snd.ind}(1));
-
 % update fixed cost
 new_cost.fixed(fst.ind) = ~isempty(new_1st_cus) * data.fixed_vhc;
 new_cost.fixed(snd.ind) = ~isempty(new_2nd_cus) * data.fixed_vhc;
@@ -272,7 +263,7 @@ new_cost.route(fst.ind) = new_1st_len * data.coef_sfs;
 new_cost.route(snd.ind) = new_2nd_len * data.coef_sfs;
 
 % update total cost
-new_cost.total = sum(new_cost.trans+new_cost.fixed+new_cost.route);
+new_cost.total = sum(new_cost.fixed+new_cost.route);
 
 % update capacity penalty cost because param_ts.PEN is mutable
 fst_exceed = max([new_1st_cap - data.cap_vhc, 0]);

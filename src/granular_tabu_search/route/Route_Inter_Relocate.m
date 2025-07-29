@@ -44,8 +44,6 @@ if is_random
         data.dist_snd_layer(cus.ind, cus.old_after);
     fst.route_cap = route.occupied_capacity(fst.ind) - cus.dmd;
     fst.route_cus = fst.route(2:end-1) - data.num_store;
-    fst.trans_cost = route.cost.trans(fst.ind) - cus.dmd * data.coef_trans * ...
-        data.dist_fst_layer(route.waypoints{fst.ind}(1));
     fst.fixed_cost = ~isempty(fst.route_cus) * data.fixed_vhc;
 
     % second route
@@ -53,8 +51,6 @@ if is_random
     while fst.ind == snd_ind
         snd_ind = randi(length(route.waypoints));
     end
-    snd_trans_cost = route.cost.trans(snd_ind) + cus.dmd * data.coef_trans * ...
-        data.dist_fst_layer(route.waypoints{snd_ind}(1));
 
     cus.pos_ind = randi([1, length(route.waypoints{snd_ind}) - 1]);
     cus.new_before = route.waypoints{snd_ind}(cus.pos_ind);
@@ -67,7 +63,7 @@ if is_random
 
     % relocate and update neighbor
     [neighbor, break_arcs, best_general_cost] = ...
-        Relocate_Cus(fst, cus, snd_ind, snd_trans_cost, employ_num, ...
+        Relocate_Cus(fst, cus, snd_ind, 0, employ_num, ...
         route, data, tabu_list, frequency, frequency_sum, param_ts, ...
         neighbor, break_arcs, best_general_cost, true);
     return
@@ -100,8 +96,6 @@ parfor fst_ind = 1:route_num
         fst.route_cap = route.occupied_capacity(fst.ind) - cus.dmd;
         fst.route_cus = fst.route(2:end-1) - data.num_store;
         fst.fixed_cost = ~isempty(fst.route_cus) * data.fixed_vhc;
-        fst.trans_cost = route.cost.trans(fst.ind) - cus.dmd * ...
-            data.coef_trans * data.dist_fst_layer(route.waypoints{fst.ind}(1));
         fst.route_len = route.length(fst.ind) + ...
             data.dist_snd_layer(cus.old_before, cus.old_after) - ...
             data.dist_snd_layer(cus.old_before, cus.ind) - ...
@@ -121,16 +115,13 @@ parfor fst_ind = 1:route_num
                 continue
             end
 
-            snd_trans_cost = route.cost.trans(snd_ind) + ...
-                cus.dmd * data.coef_trans * data.dist_fst_layer(snd_store);
-
             for pos_ind = 1:length(route.waypoints{snd_ind}) - 1
                 cus.new_before = route.waypoints{snd_ind}(pos_ind);
                 cus.new_after = route.waypoints{snd_ind}(pos_ind + 1);
                 cus.pos_ind = pos_ind;
 
                 [route_neighbor, route_arcs, route_general_cost] = ...
-                    Relocate_Cus(fst, cus, snd_ind, snd_trans_cost, ...
+                    Relocate_Cus(fst, cus, snd_ind, 0, ...
                     employ_num, route, data, tabu_list, frequency, ...
                     frequency_sum, param_ts, route_neighbor, route_arcs, ...
                     route_general_cost, false);
@@ -153,7 +144,7 @@ best_general_cost = cost_par(best_ind);
 end
 
 function [neighbor, arcs, general_cost] = Relocate_Cus(fst, cus, ...
-    snd_ind, snd_trans_cost, employ_num, route, data, tabu_list, frequency, ...
+    snd_ind, ~, employ_num, route, data, tabu_list, frequency, ...
     frequency_sum, param_ts, neighbor, arcs, general_cost, is_random)
 % Relocate the customer and update neighbor
 
@@ -203,10 +194,6 @@ employ_num = employ_num - (length(route.waypoints{fst.ind}) > 2) - ...
 % update cost for the new route structure
 cost = route.cost;
 
-% update transportation cost
-cost.trans(fst.ind) = fst.trans_cost;
-cost.trans(snd_ind) = snd_trans_cost;
-
 % update fixed cost
 cost.fixed(fst.ind) = fst.fixed_cost;
 cost.fixed(snd_ind) = data.fixed_vhc;
@@ -216,7 +203,7 @@ cost.route(fst.ind) = fst.route_len * data.coef_sfs;
 cost.route(snd_ind) = snd_route_len * data.coef_sfs;
 
 % update total cost
-cost.total = sum(cost.trans+cost.fixed+cost.route);
+cost.total = sum(cost.fixed+cost.route);
 
 % update capacity penalty cost because param_ts.PEN is mutable
 fst_exceed_cap = max([fst.route_cap - data.cap_vhc, 0]);
@@ -268,14 +255,12 @@ end
 function r_info = Get_Route_Info()
 % Create an empty route information
 
-coder.inline("always");
 r_info = struct();
 r_info.ind = 0;
 r_info.route = zeros(1, 0);
 r_info.route_len = 0;
 r_info.route_cap = 0;
 r_info.route_cus = zeros(1, 0);
-r_info.trans_cost = 0;
 r_info.fixed_cost = 0;
 
 coder.varsize("r_info.route", [1, inf]);
@@ -285,7 +270,6 @@ end
 function cus = Get_Cus_Info()
 % Create an empty customer information
 
-coder.inline("always");
 cus = struct();
 cus.ind = 0;
 cus.dmd = 0;

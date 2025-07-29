@@ -24,7 +24,6 @@ route.waypoints = [route.waypoints; empty_routes];
 route.length = [route.length; zero_vec];
 route.occupied_capacity = [route.occupied_capacity; zero_vec];
 route.exceeded_capacity = [route.exceeded_capacity; zero_vec];
-route.cost.trans = [route.cost.trans; zero_vec];
 route.cost.fixed = [route.cost.fixed; zero_vec];
 route.cost.route = [route.cost.route; zero_vec];
 route.cost.penalty_capacity = [route.cost.penalty_capacity; zero_vec];
