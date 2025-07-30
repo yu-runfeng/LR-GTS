@@ -433,7 +433,7 @@ class Model:
     def _I_minus_set(self, I, n, i, i_0):
         # get a subset of I
         # if i \ne n, return I \cup {i_o} \backslash {i}
-        # else, return I \cup {i_o}
+        # else, return I
         if i == n:
             return list(I)
         else:
@@ -444,7 +444,7 @@ class Model:
     def _I_plus_set(self, I, n, i, i_0):
         # get a subset of I
         # if i \ne i_0, return {n} \cup I \backslash {i}
-        # else, return {n} \cup I
+        # else, return I
         if i != i_0:
             temp = deepcopy([n] + list(I))
             temp.remove(i)
