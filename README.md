@@ -81,7 +81,7 @@ The extension varies by platform (e.g., ```Lr-Gts.mexw64``` on Windows).
 │   ├── prodhon/                # Prodhon's LRP-2E dataset
 │   ├── snyder/                 # Snyder's dataset (customized)
 │   └── tuzun/                  # Tuzun's LRP dataset with capacitated vehicles
-├── results/                  
+├── results/                    # results for inputs        
 │   ├── nuguyen/                
 │   ├── prodhon/               
 │   ├── snyder/                
@@ -116,3 +116,4 @@ individuals and organizations for their direct or indirect support:
 - Gurobi’s China distributor provided an academic license for Gurobi 12.
 - Thanks also to the Gurobi community for their prompt support in resolving the 
   bug we encountered with the solver.
+- We recommend [MBeautifier](https://github.com/davidvarga/MBeautifier) for formatting Matlab codes.
