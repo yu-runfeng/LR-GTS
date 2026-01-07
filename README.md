@@ -81,11 +81,13 @@ The extension varies by platform (e.g., ```Lr-Gts.mexw64``` on Windows).
 │   ├── prodhon/                # Prodhon's LRP-2E dataset
 │   ├── snyder/                 # Snyder's dataset (customized)
 │   └── tuzun/                  # Tuzun's LRP dataset with capacitated vehicles
+│
 ├── results/                    # results for inputs        
 │   ├── nuguyen/                
 │   ├── prodhon/               
 │   ├── snyder/                
-│   └── tuzun/                 
+│   └── tuzun/
+│
 ├── src/
 │   ├── coder_entry/            # Matlab Coder entry point function
 │   ├── data_reader/            # Functions to read data from files
@@ -95,12 +97,9 @@ The extension varies by platform (e.g., ```Lr-Gts.mexw64``` on Windows).
 │   ├── lr_gts/                 # LR-GTS heuristic
 │   ├── scripts/                # Main function and runners
 │   └── utils/                  # Utility tools
+│
 └── README.md
 ```
-
-# License
-
-This project is licensed under the MIT License.
 
 # Acknowledgements
 
