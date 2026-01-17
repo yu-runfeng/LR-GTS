@@ -5,7 +5,16 @@ method to solve a multi-channel store location problem.
 It serves as the electronic supplement to the following paper:
 
 ```
-TODO: FILL THIS BIB BLANK
+@article{yun2026,
+    title = {A multi-channel retail store location model considering customer retry purchasing patterns},
+    journal = {Transportation Research Part E: Logistics and Transportation Review},
+    volume = {208},
+    pages = {104674},
+    year = {2026},
+    issn = {1366-5545},
+    doi = {https://doi.org/10.1016/j.tre.2026.104674},
+    author = {Lifen Yun and Runfeng Yu and Hongqiang Fan and Yuanjie Tang and Xun Weng}
+}
 ```
 
 The purpose of the project is to enhance the credibility of the paper and the 
